@@ -1,0 +1,188 @@
+/* Bagian awal ini merupakan bagian Universal Selector */
+/*Fungsi dari selector ini adalah untuk menghapus margin dan juga padding default browser*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Bagian Berikut nya ini adalah bagian Body*/
+/*Pada bagian BOdy ini berfungsi mengatur tampilan seluruh halaman Web*/
+/*yang di dalam nya ada Font, Background Warna Web, dan Jarak antar baris*/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f4f4;
+  line-height: 1.6;
+}
+
+/*Bagian Berikutnya ada Header */
+/*Pada bagian ini Header berfungsi Mengatur bagian Header pada HTML*/
+/*Yang di dalam nya berisi Backgroun Warna, warna Teks, Posisi Center Tulisan, dan Padding*/
+header {
+  background-color: #0077cc;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+
+/*Pada bagian berikutnya adalah Container*/
+/*Pada bagian ini berfungsi untuk membungkus seluruh CV*/
+/*yang di dalamnya berisi pengaturan Lebar, Posisi Tengah Container, Background, Sudut lengkung, dan Bayangan*/
+.container {
+  width: 85%;
+  margin: 20px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/*Bagian berikutnya ini adalam banner*/
+/*Berfungsi menjadi Background prifile*/
+.banner {
+  position: relative;
+}
+
+/*Berikut nya untuk mengatur gambar banner*/
+/*Yang didalam nya berisi Width, Height, Dan Object-Fit*/
+.banner img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+/*Lalu bagian berikutnya Profile*/
+/*Pada bagian ini berfungsi untuk menampilkan foto profile si atas banner*/
+/*Yang berisikan Prisition, left, Bootom, Transform*/
+.profile {
+  position: absolute;
+  left: 50%;
+  bottom: -30px;
+  transform: translateX(-50%);
+}
+
+/*Berikutnya untuk mengatur gambar profile*/
+/*Yang berisikan Ukuran foto, Linkar Foto, dan Bingkai*/
+.profile img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid white;
+}
+
+/*HEADING 2*/
+/*Pada bagian ini berfungsi untuk mengatur seluruh heading H2*/
+h2 {
+  color: #0077cc;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #0077cc;
+  padding-bottom: 5px;
+}
+
+/*Paragraf*/
+/*Pada bagian ini berfungsi untuk mengatur seluruh Paragraf*/
+p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+/*Flex Box*/
+/*Pada bagian ini berfungsi untuk mengatur table agar bisa bersebelahan*/
+.table-container {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/*Pada 2 bagian ini berfungsi untuk mengatur pembagian lebar dari 2 tabel*/
+.table-box:first-child {
+  flex: 5; /* 50% */
+}
+
+.table-box:last-child {
+  flex: 5; /* 50% */
+}
+
+.table-box table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Responsive HP */
+/*pada bagian ini akan berfungsi jika hp kurang dari 768Px*/
+@media screen and (max-width: 768px) {
+  .table-container {
+    flex-direction: column;
+  }
+
+  .table-box:first-child,
+  .table-box:last-child {
+    flex: 1;
+  }
+}
+
+/*Lalu bagian berikutnya ada tabel*/
+/*pada bagian ini berfungsi untuk membuat garis pada tabel*/
+table,
+th,
+td {
+  border: 1px solid #333;
+}
+
+th {
+  background-color: #0077cc;
+  color: white;
+}
+
+th,
+td {
+  padding: 10px;
+}
+
+/*Lalu bagian berikut nya adalah list*/
+/*Pada bagian ini berfungsi untuk memberikan identitas pada lint UL dan OL*/
+ul,
+ol {
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+
+/*Bagian berikutnya Hyperlink*/
+/*Pada bagian ini berfungsi untuk menghapus garis bawah pada link yang kita taro di WEB*/
+a {
+  text-decoration: none;
+  color: #0077cc;
+}
+
+a:hover {
+  color: red;
+}
+
+/*Pada bagian berikutnya ada Gallery*/
+/*BErfungsi untuk mengatur gambar pada gallery*/
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/*Pada bagian ini berfungsi untuk mengatus semua ukuran gambar pada gallery*/
+.gallery img {
+  width: 250px;
+  height: 150px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/*Pada bagian terakhir footer berfungsi untuk mengatur bagian bawah Web*/
+/*yang berisikan Copyright CV/Web*/
+footer {
+  background-color: #0077cc;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
